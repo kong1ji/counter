@@ -275,6 +275,7 @@ public class MainActivity extends AppCompatActivity {
         }else if(operator.equals("/")&&sign==2){
 //            result=x/y;
             if(y==0){
+                clean();
                 etInOut.setText("零不能当除数");
                 return;
             }
@@ -284,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
             etInOut.setSelection(etInOut.getText().length());
             sign=0;
             operator="";
-            x=result;
+            x=(int)result2;
         }else if(operator.equals("%")&&sign==2){
             result=x%y;
             etShowInfo.setText(x+operator+y);
